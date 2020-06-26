@@ -1,0 +1,31 @@
+<!--templates/home.html-->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Django Highcharts Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h3>컴퓨터정보과 A반 218210020 강소은</h3>
+<h2>기말과제</h2>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-warning"><a href="{% url 'ju_covid_19' %}">Jupyter Lab에서 작성한 코로나 19 차트</a></li>
+    <li class="list-group-item list-group-item-success"><a href="{% url 'covid_19' %}">코로나 19 확진자, 회복자, 사망자 시각화 차트</a></li>
+    <li class="list-group-item list-group-item-info"><a href="{% url 'ticket_class_view_2' %}">타이타닉 생존/비 생존 인원 및 생존율 시각화 차트</a></li>
+  </ul>
+<h2>수업내용 & 참고자료</h2>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-warning"><a href="{% url 'world_population' %}">World Population</a></li>
+    <li class="list-group-item list-group-item-danger"><a href="{% url 'ticket_class_view_1' %}">방법1을 사용한 타이타닉 생존/비 생존 인원 시각화 차트</a></li>
+    <li class="list-group-item list-group-item-info"><a href="{% url 'ticket_class_view_3' %}">방법3을 사용한 타이타닉 생존/비 생존 인원 시각화 차트</a></li>
+    <li class="list-group-item list-group-item-success"><a href="{% url 'json_example' %}">JSON Example</a></li>
+    <li class="list-group-item list-group-item-warning"><a href="https://simpleisbetterthancomplex.com/tutorial/2018/04/03/how-to-integrate-highcharts-js-with-django.html">기사 : How to Integrate Highcharts.js with Django</a></li>
+    <li class="list-group-item list-group-item-danger"><a href="https://github.com/sibtc/django-highcharts-example">다운 : GitHub</a></li>
+  </ul>
+</div>
+</body>
+</html>

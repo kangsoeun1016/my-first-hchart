@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Highcharts covid19</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <a href="{% url 'home' %}">Return to homepage</a>
+    <div id = "container"></div>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script>
+        Highcharts.chart('container',{
+            title:{
+                text: '코로나 19 확진자, 회복자, 사망자 시각화 차트'
+            },
+            xAxis:{
+                'categories' : {{date}},
+                'tickInterval' : 10
+            },
+            series:[{
+                name: 'France',
+                data: {{france_series}},
+                color:'red'
+            },{
+                name: 'Germany',
+                data: {{germany_series}},
+                color: 'blue'
+            },{
+                name: 'Korea',
+                data: {{korea_series}},
+                color:'purple'
+            },{
+                name: 'US',
+                data: {{us_series}},
+                color:'pink'
+            },{
+                name: 'UK',
+                data: {{uk_series}},
+                color:'green'
+        }]
+        });
+    </script>
+</div>
+</body>
+</html>
